@@ -65,4 +65,9 @@ echo "<br>";
 
 
 // Constants - cannot be changed.
+
+//define('HOST','local host');
+define('USER','root');
+
+
 ?>
