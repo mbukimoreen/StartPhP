@@ -138,22 +138,113 @@ send to my email -  erick@riconets.com
  */
 
 
+// ARRAY FUNCTIONS
+
+ echo "<br>";
+echo "######################### <br>";
+$simpearray = [1,2,3,4];
+var_dump( $simpearray);
+
+// alternatively
+$simpearray = array(1,2,3,4);
+var_dump( $simpearray);
+
+echo "<br>";
+echo "######################### <br>";
+
+$fruit = array('apple','banana','orange');
+
+// get the array length
+echo count($fruit);
+
+// search
+echo in_array('banana', $fruit);
+
+echo "<br>";
+echo "######################### <br>";
+
+// Adding an elememt into an array
+array_push($fruit, 'mango','pepper');
+var_dump($fruit);
+
+echo "<br>";
+echo "######################### <br>";
+
+// adding an element at the beginning 
+ array_unshift($fruit, 'kiwi');
+ var_dump($fruit);
 
 
-// ASSIGNMENT 
-/*
-1. Write PHP that displays the 'My name is Kelcy, I'm 20 years old and 126cm tall from an array below.
+ // remove an element in a an array
+ echo "<br>";
+ echo "######################### <br>";
 
-$Kelcy = [
-  $name => 'Kelcy',
-  $age => '20 years',
-  $height => '126cm'
-];
+ array_pop($fruit); // removes the last element in our array
 
-2. Write a PhP Script that decode the followimg JSON string
-(Associative array)
-{"Title": "The Double Sword",
-:}
+ array_shift($fruit); // removes the first element
+ print_r($fruit);
 
-*/
+echo "<br>";
+echo "######################### <br>";
+// removing a specific element in an array
+unset($fruit[3]);
+print_r($fruit);
 
+// split into chunks of 2 
+$chunkarray = array_chunk($fruit, 2);
+
+// concantenate array
+ $arr1= array(1,2,3);
+ $arr2 = array(5,6,7);
+
+ $arr3 = array_merge($arr1, $arr2);
+ print_r($arr3);
+
+// Using spread
+echo "<br>";
+echo "######################### <br>";
+
+$arr4 = [...$arr1,...$arr2];
+print_r($arr4);
+
+
+// Combine kes and values
+echo "<br>";
+echo "######################### <br>";
+$n =[ 'green','red','yellow'];
+$m =[ 'raw pepper','apple','banana'];
+$k = array_combine($n,$m);
+print_r($k);
+
+$keys = array_keys($k);
+print_r( $keys);
+
+echo "<br>";
+echo "######################### <br>";
+// flip keys with values
+$flipped = array_flip($k);
+print_r($flipped);
+
+echo "<br>";
+echo "######################### <br>";
+// Array with a range
+
+$newnubers = range(1, 20);
+print_r($newnubers);
+
+echo "<br>";
+echo "######################### <br>";
+// Mapping 
+
+$mappedno = array_map(function($nubers){ 
+  return "Number $nubers";
+
+}, $newnubers);
+print_r($mappedno);
+
+echo "<br>";
+echo "######################### <br>";
+// filter an array
+
+$lessthan10 = array_filter($newnubers, fn($nubers) => $nubers < 10);
+print_r($lessthan10);

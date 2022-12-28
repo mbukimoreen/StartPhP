@@ -20,8 +20,22 @@ echo"<br>";
 print_r($kelcy);
 echo"<br>";
 echo "My name is $kelcy[0], I'm $kelcy[1] old and $kelcy[2] tall";
+/*
+// alternatively
 
+echo"<br>";
+$kelcy = [
+  $name => 'Kelcy',
+  $age => 20,
+  $height => 126 
+];
 
+echo"<br>";
+print_r($kelcy);
+echo"<br>";
+echo "My name is $kelcy[0], I'm $kelcy[1] old and $kelcy[2] tall";
+
+*/
 /*
 2. Write a PHP Script that decodes the following JSON string
 {"Title": "The Double Sword",
