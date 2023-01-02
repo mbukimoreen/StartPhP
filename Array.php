@@ -248,3 +248,67 @@ echo "######################### <br>";
 
 $lessthan10 = array_filter($newnubers, fn($nubers) => $nubers < 10);
 print_r($lessthan10);
+
+
+echo "<br>";
+echo "######################### <br>";
+// chznge key case
+// has to be an associative array
+
+$seasons = array('summer' => '1000', 'winter' => '2000','spring' => '3000', 'autumn' => '4000');
+$newseasons = array_change_key_case($seasons,  CASE_UPPER);
+print_r($newseasons);
+
+echo "<br>";
+echo "######################### <br>";
+// count in array
+
+ echo count($seasons);
+
+
+ 
+ echo "<br>";
+ echo "######################### <br>";
+ //Sorting array
+
+ sort($seasons);
+ foreach($seasons as $season){
+   echo"$season<br>";
+ }
+
+ $days = array('Monday','Tuesday','Wednesday','Thursday','Friday' );
+ //print_r($days);
+ sort($days);
+  foreach($days as $day){
+    echo"$day<br>";
+  }
+/*
+  echo "<br>";
+  echo "######################### <br>";
+
+  $reverseDays = array_reverse($days);
+
+  foreach($days as $day){
+    echo"$day<br>";
+  }
+*/
+
+  echo "<br>";
+  echo "######################### <br>";
+
+  $animal =array('dog','cat','goat','rat');
+  $key = array_search('dog',$animal);
+  echo $key;
+
+  echo "<br>";
+  echo "######################### <br>";
+  $team1 =array('John','Janet','Joseph','Val');
+  $team2 =array('James','Val','linet','John');
+
+  $intersectedArrays = array_intersect($team1, $team2);
+
+  foreach($intersectedArrays as   $intersectedArray){
+    echo"$  $intersectedArray<br>";
+
+  }
+  
