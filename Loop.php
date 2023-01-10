@@ -77,11 +77,75 @@ foreach ($numbers as $number) {
    echo "Number : $number <br>";
 }
 
+echo "######################################################<br>";
 
 // Use the indexes within the loop
+$posts = ["post one", "post two", " post three"];
+foreach ($posts as $index => $post) {
+    echo"${index} - ${post} <br>";
+    
+    
+}
+echo "######################################################<br>";
+
+// Use the keys within the loop for an associative array
+$person = [
+  'first_name' => 'John',
+  'last_name' => 'Doe',
+  'email' => 'johndoe@yahoo.com'
+];
+
+echo"######################################################<br>";
+
+// Get the Keys
+foreach ($person as $key => $value) {
+   echo "${key} > ${value} <br>";
+}
+
+echo "######################################################<br>";
+
+// Write a script in php to construct the following pattern
+/*
+*
+**
+***
+****
+*****
+ */
 
 
+ for ($m = 1; $m <= 5; $m++) { 
+  for ($n = 1; $n <= $m ; $n++) { 
+    echo "*";
+    if($n < $m){
+      echo " ";
+    }
+  }
+  echo "<br>";
+ }
 
+//  Exercise
+ // Write a script in php to construct the following pattern
+
+ /*
+ 1
+ 2 3
+ 4 5 6
+ 7 8 9 10
+   */
+
+  //  hint: printf();
+// Solution
+
+for ($m = 1; $m <= 5; $m++) { 
+  for ($n = 1; $n <= $m ; $n++) { 
+    echo "*";
+    if($n < $m){
+      echo " ";
+    }
+  }
+  echo "<br>";
+ }
 
 // Use the keys within the loop for an associative array
 
