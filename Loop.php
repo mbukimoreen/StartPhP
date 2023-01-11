@@ -136,12 +136,15 @@ echo "######################################################<br>";
 
   //  hint: printf();
 // Solution
+$m = 1;
+$count = 1;
 
-for ($m = 1; $m <= 5; $m++) { 
-  for ($n = 1; $n <= $m ; $n++) { 
-    echo "*";
-    if($n < $m){
-      echo " ";
+for ($row = $m ; $row >0; $m ++) { 
+  for ($col = $row; $col <= $row ; $col++) { 
+    
+     if($col < $row){
+      printf("%4s", $count);
+     $count++;
     }
   }
   echo "<br>";
@@ -149,6 +152,19 @@ for ($m = 1; $m <= 5; $m++) {
 
 // Use the keys within the loop for an associative array
 
-
+ //  hint: printf();
+/*
+ $m = 4;
+ $count = 1;
+ echo "m = " . $m . "<br>";
+  for($row = $m; $row > 0; $row--){
+   for($col = $row; $col <= $row; $col++){
+     printf("%4s", $count);
+     $count++;
+   }
+   echo '<br>';
+  }
+ 
+   */
 
 // Get the Keys
