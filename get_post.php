@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<a href="<?php echo $_SERVER["PHP_SELF"] ?>?username=mbuki">Link</>
+<a href="<?php echo $_SERVER["PHP_SELF"] ?>?username=mbuki">Link</></a>
 <br><br>
 
   <form action="<?php echo $_SERVER["PHP_SELF"] ; ?><" method="post"></form>

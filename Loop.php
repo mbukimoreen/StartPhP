@@ -136,19 +136,25 @@ echo "######################################################<br>";
 
   //  hint: printf();
 // Solution
-$m = 1;
+$m = 4;
+$row;
+$col;
 $count = 1;
+$num;
 
-for ($row = $m ; $row >0; $m ++) { 
-  for ($col = $row; $col <= $row ; $col++) { 
+
+for ($row = 1 ; $row <= $m; $row ++) { 
+  $num = 1;
+
+  for ($col = 1; $col <= $count ; $col++) { 
     
-     if($col < $row){
-      printf("%4s", $count);
-     $count++;
+     $num ++;
+     
     }
+    $count++;
   }
   echo "<br>";
- }
+}
 
 // Use the keys within the loop for an associative array
 
