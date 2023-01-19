@@ -6,8 +6,8 @@
 */
 
 if (isset($_POST['submit'])) {
-  $username = $_POST['email'];
-  $email = $_POST['email'];
+   $username = $_POST['username'];
+   $email = $_POST['email'];
 
   // htmlspecialchars() - Convert special characters to HTML entities
    $username = htmlspecialchars($_POST['username']);
@@ -27,40 +27,23 @@ if (isset($_POST['submit'])) {
   // FILTER_SANITIZE_NUMBER_INT - Convert string to an integer
   // FILTER_SANITIZE_NUMBER_FLOAT - Convert string to a float
   // FILTER_SANITIZE_FULL_SPECIAL_CHARS - HTML-encodes special characters, keeps spaces and most other characters
-} 
-?>
+} ?>
 
 <!-- Pass data through a form -->
 <!-- php_self can be used for xss -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sanitizing Inputs </title>
-</head>
-<body>
-<!-- Passing Data through a form -->
-<h1>Sanitizing Data in Forms </h1>
-<form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
+<form action="<?php echo htmlspecialchars(
+  $_SERVER['PHP_SELF']
+); ?>" method="POST">
 <div>
-  <label for="Username">Username:</label>
-  <input type="text" name="username" id="username" required>
+  <label for = "Username">Username: </label>
+  <input type="text" name="username">
 </div>
 <br>
 <?php echo $email; ?>
 <div>
-<label for="Email">Email Add:</label>
-<input type="email" name="email_address" id="email" required>
+<label for = "Email">Email: </label>
+  <input type="email" name="email">
 </div>
 <br>
-<input type="submit" value="Submit">
+  <input type="submit" name="submit" value="Submit">
 </form>
-</body>
-</html>
-
-
-
-

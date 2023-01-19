@@ -154,7 +154,6 @@ for ($row = 1 ; $row <= $m; $row ++) {
     $count++;
   }
   echo "<br>";
-}
 
 // Use the keys within the loop for an associative array
 
