@@ -14,7 +14,7 @@ echo '<br>';
 echo '<h2> This is interesting </h2>';
 echo '<br>';
 
-// Using double quates
+// Using double quotes
 echo " I'm going to school today to check out on my friends";
 echo '<br>';
 echo "<h3> This is HTML5 such a interesting language </h3>";

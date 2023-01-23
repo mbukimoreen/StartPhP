@@ -19,7 +19,7 @@ function register_user(){
 }
 // Running a function
 
-// register_user();
+ register_user();
 
 // Adding params
 function create_user($username){
@@ -27,20 +27,20 @@ function create_user($username){
 }
 
 // Pass in an argument
-// create_user('JohnDoe');
+create_user('JohnDoe');
 
 // Returning values
 function add($num1, $num2){
   return $num1 + $num2;
 }
 $sum = add(15, 90);
-// echo $sum;
+echo $sum;
 
 // Adding default values
 function subtract($dig1 = 10, $dig2 = 5){
   return $dig1 - $dig2;
 }
-// echo subtract();
+ echo subtract();
 
 // Assigning anonymous functions to variables. Often used for closures and callback functions
 

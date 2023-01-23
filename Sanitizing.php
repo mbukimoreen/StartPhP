@@ -33,6 +33,7 @@ if (isset($_POST['submit'])) {
 <!-- Pass data through a form -->
 <!-- php_self can be used for xss -->
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +51,9 @@ if (isset($_POST['submit'])) {
   <input type="text" name="username" id="username" required>
 </div>
 <br>
-<?php echo $email; ?>
+<?php 
+echo$email; 
+?>
 <div>
 <label for="Email">Email Add:</label>
 <input type="email" name="email_address" id="email" required>
