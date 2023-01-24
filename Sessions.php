@@ -88,7 +88,7 @@ if (isset($_POST['submit'])) {
     header('Location: /startphp/resource/dashboard.php');
   } else {
     echo '<h1> Welcome, Guest </h1>';
-    echo '<a href = "home" > Home</a>';
+    echo '<a href = "\StartPhP\Sessions.php" > Home</a>';
   }
 }
 ?>
